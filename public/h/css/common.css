@@ -1,0 +1,81 @@
+
+html,body,.container-fluid {
+    height: 100%;
+}
+a:link,
+a:visited,
+a:hover,
+a:active{
+    text-decoration: none;
+}
+a:hover {
+    color: #fff;
+}
+.body_bg {
+    background-color: #ace;
+}
+.top_250 {
+    margin-top: 250px;
+}
+
+.le_aside {
+    width: 180px;
+    height: 100%;
+    background-color: #222d32;
+    position: absolute;
+    left: 0;
+}
+
+.le_brand {
+    width: 100%;
+    background-color: #367fa9;
+    display: block;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    color: white;
+}
+.le_user {
+    text-align: center;
+    margin-top: 30px;
+}
+.le_user img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.le_user p {
+    padding: 10px 0;
+    font-size: 20px;
+    line-height: 40px;
+    color: #fff;
+}
+.le_nav {
+    line-height: 36px;
+    font-size: 16px;
+}
+.le_nav .list-unstyled {
+    padding-left: 40px;
+}
+.le_nav .list-unstyled ul {
+    padding-left: 30px;
+    line-height: 32px;
+}
+.le_nav a {
+    color: #fff;
+}
+
+.le_main {
+    padding-left: 180px;
+}
+
+.le_main-header {
+    background-color: #3c8dbc;
+    height: 50px;
+}
+.le_main-header a {
+    color: white;
+}
