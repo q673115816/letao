@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/common.css">
 </head>
 <body>
-<div class="le_aside new">
+<div class="le_aside">
     <a class="le_brand" href="javascript:;">黑马17期</a>
     <div class="le_user">
         <img src="./images/default.png" alt="">
@@ -28,13 +28,13 @@
                     <li><a href="./second.html">第二分类</a></li>
                 </ul>
             </li>
-            <li><a href="./product.html">
+            <li><a href="./product.html" class="active">
                 <i class="glyphicon glyphicon-tags"></i>
                 商品管理</a></li>
         </ul>
     </nav>
 </div>
-<div class="le_main new">
+<div class="le_main">
     <div class="le_main-header">
         <a href="javascript:;" class="pull-left">
             <i class="glyphicon glyphicon-align-justify"></i>
@@ -46,38 +46,17 @@
     <div class="le_main-content">
         <div class="container-fluid">
             <ol class="breadcrumb">
-                <li><a href="#">管理系统</a></li>
-                <li class="active">首页</li>
+                <li><a href="./index.html">管理系统</a></li>
+                <li class="active">商品管理</li>
             </ol>
-            <div class="charts pull-left" id="chart1"></div>
-            <div class="charts pull-right" id="chart2"></div>
         </div>
     </div>
 </div>
 
-
-<div class="modal fade bs-example-modal-sm" id="le_logout">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">温馨提示</h4>
-            </div>
-            <div class="modal-body">
-                <p class="text-danger"><i class="glyphicon glyphicon-info-sign"></i>您确定要退出后台管理系统吗？;</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary btn_logout">退出</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
 <script src="./lib/jquery/jquery.min.js"></script>
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
-<script src="./lib/echarts/echarts.min.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/index.js"></script>
+<script src="./js/login.js"></script>
 </body>
 </html>
