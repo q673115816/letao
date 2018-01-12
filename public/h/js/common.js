@@ -1,4 +1,27 @@
 $(function(){
+    if(location.href.indexOf("login.html")!==-1){
+        $.ajax({
+            url:"/employee/checkRootLogin",
+            success:function(i){
+                // console.log(i);
+                if(i.success){
+                    location.href = "index.html"
+                }
+            }
+        })
+    }
+    if(location.href.indexOf("login.html")==-1){
+        $.ajax({
+            url:"/employee/checkRootLogin",
+            success:function(i){
+                // console.log(i);
+                if(i.error){
+                    location.href = "login.html"
+                }
+            }
+        })
+    }
+
     $(".second").prev().on("click",function(){
         $(".second").slideToggle(500);
     })
@@ -19,4 +42,6 @@ $(function(){
             }
         })
     })
+
+
 })
