@@ -52,6 +52,19 @@
                 <li><a href="#">分类管理</a></li>
                 <li class="active">第一分类</li>
             </ol>
+            <button class="btn btn-default mb-20 first_add">添加分类</button>
+            <table class="table table-bordered table-hover text-center">
+                <thead>
+                <td width="20%">序号</td>
+                <td width="80%">分类名称</td>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <div class="text-right">
+                <ul class="pagination"></ul>
+            </div>
         </div>
     </div>
 </div>
@@ -75,11 +88,46 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+<div class="modal fade bs-example-modal-sm" id="add_cate">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">添加分类</h4>
+            </div>
+            <div class="modal-body">
+                <form id="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="addcategroy" placeholder="请输入一级分类的名称" name="categoryName">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button form="form" class="btn btn-primary btn_categroy">提交</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+<script type="text/html" id="tpl">
+    {{ each rows v i }}
+    <tr>
+        <td>{{ (page-1) * size + i + 1 }}</td>
+        <td>{{ v.categoryName }}</td>
+    </tr>
+    {{ /each }}
+</script>
+
+
 <script src="./lib/jquery/jquery.min.js"></script>
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+<script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>
-
 <script src="./js/common.js"></script>
+<script src="./js/first.js"></script>
 </body>
 </html>

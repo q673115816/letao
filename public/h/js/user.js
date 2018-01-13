@@ -26,5 +26,19 @@ $(function(){
             }
         })
     }
-
-})
+    $("tbody").on("click",".btn",function(){
+        var id = $(this).parent().data("id");
+        var isDelete = $(this).hasClass("btn-success")?1:0;
+        $.ajax({
+            type:"post",
+            url:"/user/updateUser",
+            data:{
+                id: id,
+                isDelete:isDelete
+            },
+            success:function(i){
+                render()
+            }
+        })
+    })
+});
