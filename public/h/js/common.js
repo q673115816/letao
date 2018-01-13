@@ -1,4 +1,13 @@
 $(function(){
+    NProgress.configure({ showSpinner: false });
+    $(document).ajaxStart(function(){
+        NProgress.start();
+    });
+    $(document).ajaxComplete(function(){
+        setTimeout(function(){
+            NProgress.done()
+        },500)
+    });
     if(location.href.indexOf("login.html")!==-1){
         $.ajax({
             url:"/employee/checkRootLogin",
@@ -21,7 +30,6 @@ $(function(){
             }
         })
     }
-
     $(".second").prev().on("click",function(){
         $(".second").slideToggle(500);
     })
@@ -32,7 +40,7 @@ $(function(){
     $(".glyphicon-log-out").on("click",function(){
         $("#le_logout").modal("show");
     })
-    $(".btn_logout").on("click",function(){
+    $(".btn_logout").off().on("click",function(){
         $.ajax({
             url:"/employee/employeeLogout",
             success:function(i){
