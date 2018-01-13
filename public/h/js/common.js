@@ -36,6 +36,7 @@ $(function(){
     $(".glyphicon-align-justify").on("click",function(){
         $(".le_main").toggleClass("new");
         $(".le_aside").toggleClass("new")
+        $(".le_main-header a").toggleClass("new")
     })
     $(".glyphicon-log-out").on("click",function(){
         $("#le_logout").modal("show");
