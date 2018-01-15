@@ -1,0 +1,144 @@
+@charset "UTF-8";
+html,body {
+    height: 100%;
+}
+img {
+    width: 100%;
+    display: block;
+}
+.lt_container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 640px;
+    min-width: 320px;
+    height: 100%;
+    position: relative;
+    padding: 45px 0 55px;
+}
+
+.lt_header {
+    height: 45px;
+    position: absolute;
+    width: 100%;
+    background-color: #069;
+    top: 0;
+    z-index: 9;
+}
+.lt_header h4 {
+    text-align: center;
+    line-height: 45px;
+    margin: 0;
+    font-weight: normal;
+    color: #fff;
+}
+.lt_header a {
+    color: #fff;
+    line-height: 45px;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+}
+.lt_header .pal {
+    left: 0;
+}
+.lt_header .par {
+    right: 0;
+ }
+
+.lt_main {
+    position: relative;
+    height: 100%;
+    background-color: #fff;
+    overflow: hidden;
+}
+.mui-slider img {
+    max-height: 400px;
+}
+.lt_main .lt_nav {
+    padding: 10px;
+    width: 100%;
+}
+.lt_main ul {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.lt_main .lt_nav li {
+    float: left;
+    width: 33.33%;
+}
+.lt_main .lt_product {
+    padding: 0 10px;
+}
+.lt_main .lt_product span{
+    color: #f00;
+}
+.lt_main .lt_product a {
+    padding: 10px;
+    float: left;
+    width: 49%;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin-bottom: 15px ;
+}
+.lt_main .lt_product a:nth-child(2n) {
+    margin-left: 2%;
+}
+
+
+.lt_category-left {
+    width: 90px;
+    height: 100%;
+    overflow: hidden;
+}
+.lt_category-left a {
+    display: block;
+    width: 90px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.lt_category-right {
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+.lt_footer {
+    height: 55px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #069;
+}
+.lt_footer ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 55px;
+}
+.lt_footer li {
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding-top: 10px;
+ }
+.lt_footer  p,
+.lt_footer a {
+    color: white;
+    margin: 0;
+}
+.lt_footer li.active p,
+.lt_footer li.active a {
+    color: darkorange;
+}
