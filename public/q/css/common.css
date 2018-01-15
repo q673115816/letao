@@ -93,6 +93,8 @@ img {
     width: 90px;
     height: 100%;
     overflow: hidden;
+    float: left;
+    position: relative;
 }
 .lt_category-left a {
     display: block;
@@ -100,11 +102,31 @@ img {
     height: 50px;
     line-height: 50px;
     text-align: center;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.lt_category-left li.active a {
+    border-right-color: transparent;
+    background-color: #ccc;
 }
 .lt_category-right {
     height: 100%;
+    overflow: hidden;
+    margin-left: 90px;
+    position: relative;
 }
-
+.lt_category-right li {
+    float: left;
+    width: 33.33%;
+}
+.lt_category-right img {
+    height: 62px;
+    width: 62px;
+    margin: 0 auto;
+}
+.lt_category-right p {
+    text-align: center;
+}
 
 
 
