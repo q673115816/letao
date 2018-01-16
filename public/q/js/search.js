@@ -17,7 +17,7 @@ $(function(){
         }
         arr.unshift(tmp);
         localStorage.setItem("lt_search_history",JSON.stringify(arr));
-        render()
+        // render()
         location.href = "./searchlist.html?key="+tmp;
     });
 
