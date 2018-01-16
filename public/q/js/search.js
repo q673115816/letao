@@ -1,11 +1,5 @@
 $(function(){
-    mui('.mui-scroll-wrapper').scroll({
-        scrollY: true, //是否竖向滚动
-        scrollX: false, //是否横向滚动
-        startX: 0, //初始化时滚动至x
-        startY: 0, //初始化时滚动至y
-        indicators: false, //是否显示滚动条
-    });
+
     $('.lt_search button').on("click",function(){
         var tmp = $(this).prev().val().trim();
         if(!tmp){
@@ -25,7 +19,11 @@ $(function(){
         localStorage.setItem("lt_search_history",JSON.stringify(arr));
         render()
         location.href = "./searchlist.html?key="+tmp;
-    })
+    });
+
+
+
+
     $(".lt_history").on("click",'span',function(){
         var index = $(this).data("id");
         mui.confirm("您确定要删除吗","温馨提示",['是','否'],function(e){
@@ -36,7 +34,10 @@ $(function(){
                 render()
             }
         })
-    })
+    });
+
+
+
     $('.lt_history').on("click",".fa-trash",function(){
         mui.confirm("您确定要删除吗","温馨提示",['是','否'],function(e){
             if(e.index==0){
@@ -44,7 +45,11 @@ $(function(){
                 render()
             }
         })
-    })
+    });
+
+
+
+
     function history(){
         var history = localStorage.getItem("lt_search_history") || [];
         var arr = JSON.parse(history);
@@ -54,4 +59,4 @@ $(function(){
     function render(){
         $(".lt_history").html(template('tpl',{arr:history()}))
     }
-})
+});
