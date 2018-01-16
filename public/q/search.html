@@ -16,7 +16,7 @@
 <div class="lt_container">
     <div class="lt_header">
         <a href="./index.html" class="pal">
-            <i class="fa fa-home"></i>
+            <i class="fa fa-arrow-left"></i>
         </a>
         <h4>乐淘云购</h4>
     </div>
@@ -24,13 +24,21 @@
         <div class="mui-scroll-wrapper">
             <div class="mui-scroll">
                 <!--这里放置真实显示的DOM内容-->
+                <div class="lt_search">
+                    <input type="text" placeholder="请输入搜索关键字">
+                    <button class="mui-btn mui-btn-blue">搜索</button>
+                </div>
+                <div class="lt_history">
+
+
+                </div>
             </div>
         </div>
 
     </div>
     <div class="lt_footer">
         <ul class="mui-clearfix">
-            <li class="active">
+            <li>
                 <a href="javascript:;">
                     <i class="fa fa-home"></i>
                     <p>首页</p>
@@ -57,9 +65,32 @@
         </ul>
     </div>
 </div>
+
+<script type="text/html" id="tpl">
+ {{ if arr.length ==0 }}
+    <p>没有历史记录</p>
+ {{ /if }}
+ {{ if arr.length >=1}}
+    <div class="lt_history-title">
+        <span>搜索历史</span>
+        <a href="javascript:;" class="mui-pull-right fa fa-trash">清空记录</a>
+    </div>
+    <div class="lt_history-main">
+        <ul>
+            {{ each arr v i }}
+            <li>
+                <a href="./searchlist.html?key={{v}}">{{ v }}</a>
+                <span data-id="{{i}}" class="mui-icon mui-icon-closeempty mui-pull-right"></span>
+            </li>
+            {{ /each }}
+        </ul>
+    </div>
+    {{ /if }}
+</script>
+
 <script src="./lib/mui/js/mui.min.js"></script>
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
-<script src="./js/index.js"></script>
+<script src="./js/search.js"></script>
 </body>
 </html>
